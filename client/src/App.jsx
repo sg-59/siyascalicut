@@ -3,6 +3,7 @@ import Signup from "./Pages/Signup"
 import Login from './Pages/Login'
 import Home from './Pages/Home'
 import { useSelector } from 'react-redux'
+import Profile from './Profile'
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
       path:'/home',
       element:<Home/>
     },
+    {
+      path:'/profile',
+      element:<Profile/>
+    }
   ])
 
   return (

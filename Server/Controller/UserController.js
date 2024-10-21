@@ -18,8 +18,10 @@ const postInfo=async(req,res)=>{
 }
 
 const getData=async(req,res)=>{
+    console.log("token value",req.headers.token);
+    
 try{
-const fullData=await user.find()
+const fullData=await user.findById(req.params.id)
 console.log("fulldata",fullData);
 
 res.status(200).json(fullData)

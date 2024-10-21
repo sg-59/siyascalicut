@@ -17,7 +17,7 @@ if(req.body.password!=originalpassword){
 
 const accesstoken=jwt.sign({id:finduser._id},process.env.jwtseckey,{expiresIn:'1d'})
 
-return res.status(200).json({token:accesstoken})
+return res.status(200).json({token:accesstoken,userId:finduser._id})
 }catch(err){
 return res.status(500).json(err.message)
 }
